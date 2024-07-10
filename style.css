@@ -1,0 +1,89 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    width: 1170px;
+    height: 80px;
+    position: relative;
+    top: 30px;
+    left: 25px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px #00000026;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.left-icons, .right-icons {
+    display: flex;
+    align-items: center;
+}
+
+.left-icons {
+    gap: 20px;
+}
+
+.left-icons a img, .right-icons a img {
+    width: 26px;
+    height: 26px;
+    transition: filter 0.3s;
+}
+
+.right-icons {
+    gap: 50px;
+}
+
+.right-icons .flag {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-icons .flag a {
+    text-decoration: none; /* Убирает подчеркивание текста */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.right-icons .flag a img {
+    width: 26px;
+    height: 26px;
+}
+
+.right-icons .flag a span {
+    width: 68px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #4F4F4F;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.right-icons a:not(.flag) img, .left-icons a img {
+    transition: filter 0.3s;
+}
+
+.right-icons a:hover:not(.flag) img, .left-icons a:hover img {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(744%) hue-rotate(202deg) brightness(94%) contrast(98%);
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 10%;
+    border: 1px solid transparent;
+}
+
+.right-icons .avatar:hover {
+    filter: none; /* Убирает эффект при наведении на аватар */
+}
+
+a:hover span {
+    color: #9E8CFC;
+}
