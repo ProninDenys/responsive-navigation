@@ -78,6 +78,7 @@ body {
     height: 36px;
     border-radius: 10%;
     border: 1px solid transparent;
+    transition: none; /* Убирает эффект при наведении на аватар */
 }
 
 .right-icons .avatar:hover {
