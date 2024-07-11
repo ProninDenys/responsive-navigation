@@ -7,37 +7,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style2.css" />
-    <title>Header and Sidebar Navigation</title>
+    <title>Sidebar Navigation</title>
   </head>
   <body>
-    <header class="header">
-      <div class="left-icons">
-     
-        <a href="#link1"><img src="img 2/Vector.svg" alt="Icon 1"></a>
-        <a href="#sidebar"><img src="img 2/Vector — копия.svg" alt="Icon 2"></a>
-        <a href="#link3"><img src="img 2/Vector (2).svg" alt="Icon 3"></a>
-        <a href="#link4"><img src="img 2/Vector (3).svg" alt="Icon 4"></a>
-      </div>
-      <div class="right-icons">
-        <div class="flag">
-          <a href="#link5"><img src="img 2/lang-icon.svg" alt="Flag USA"></a>
-          <a href="#link6"><span>English</span></a>
-        </div>
-        <a href="#link7"><img src="img 2/Vector (4).svg" alt="Icon 5"></a>
-        <a href="#link8"><img src="img 2/Vector (5).svg" alt="Icon 6"></a>
-        <a href="#link9"><img src="img 2/Vector (6).svg" alt="Icon 7"></a>
-        <a href="#link10" class="avatar"><img src="img 2/Avatar.svg" alt="Avatar"></a>
-      </div>
-    </header>
-
-    <aside class="sidebar" id="sidebar">
+    <aside class="sidebar">
       <div class="sidebar-item logo">
         <img src="img/icon.svg" alt="Logo" class="logo-img" />
         <span class="logo-text">LightBoard</span>
         <span class="arrow-container">
-          <a href="#"><img src="img/arrow.svg" alt="Arrow" class="arrow-img" /></a>
+          <img src="img/arrow.svg" alt="Arrow" class="arrow-img" />
         </span>
       </div>
       <div class="sidebar-item">
@@ -117,5 +96,12 @@
         </div>
       </div>
     </aside>
+    <script>
+      document
+        .querySelector(".arrow-container")
+        .addEventListener("click", function () {
+          alert("Arrow clicked!");
+        });
+    </script>
   </body>
 </html>
