@@ -1,23 +1,24 @@
 .header {
-    width: 1170px; /* Fixed width */
-    height: 80px; /* Fixed height */
+    width: 1170px;
+    height: 80px;
     position: relative;
-    top: 30px; /* Position from top */
-    left: 160px; /* Position from left */
-    padding: 10px 20px; /* Padding */
+    top: 30px;
+    left: 160px;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Justify content */
+    justify-content: space-between;
     align-items: center;
-    background: #FFFFFF; /* Background color */
-    box-shadow: 0px 0px 20px 0px #00000026; /* Shadow */
-    border-radius: 10px 10px 10px 10px; /* Border radius */
-    font-family: 'Montserrat', sans-serif; /* Font */
-    margin-left: 80px; /* Margin from left */
-    gap: 0px; /* Gap */
-    opacity: 1; /* Opacity */
+    background: #ffffff;
+    box-shadow: 0px 0px 20px 0px #00000026;
+    border-radius: 10px 10px 10px 10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 80px;
+    gap: 0px;
+    opacity: 1;
 }
 
-.left-icons, .right-icons {
+.left-icons,
+.right-icons {
     display: flex;
     align-items: center;
 }
@@ -26,7 +27,8 @@
     gap: 20px;
 }
 
-.left-icons a img, .right-icons a img {
+.left-icons a img,
+.right-icons a img {
     width: 26px;
     height: 26px;
     transition: filter 0.3s;
@@ -43,7 +45,7 @@
 }
 
 .right-icons .flag a {
-    text-decoration: none; /* Убирает подчеркивание текста */
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -60,17 +62,20 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
-    color: #4F4F4F;
+    color: #4f4f4f;
     text-align: left;
     transition: color 0.3s;
 }
 
-.right-icons a:not(.flag) img, .left-icons a img {
+.right-icons a:not(.flag) img,
+.left-icons a img {
     transition: filter 0.3s;
 }
 
-.right-icons a:hover:not(.flag):not(.avatar) img, .left-icons a:hover img {
-    filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(744%) hue-rotate(202deg) brightness(94%) contrast(98%);
+.right-icons a:hover:not(.flag):not(.avatar) img,
+.left-icons a:hover img {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(744%)
+    hue-rotate(202deg) brightness(94%) contrast(98%);
 }
 
 .avatar {
@@ -81,9 +86,227 @@
 }
 
 .right-icons a.avatar:hover img {
-    filter: none; /* Убирает эффект при наведении на аватар */
+    filter: none;
 }
 
 a:hover span {
-    color: #9E8CFC;
+    color: #9e8cfc;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 1150px;
+    padding: 30px 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px 0px #00000026;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s, opacity 0.3s;
+    width: 220px;
+}
+
+.sidebar-item {
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-item:hover {
+    background: #9e8cfc;
+    box-shadow: 0px 0px 20px 0px #9e8cfc;
+}
+
+.sidebar-item img {
+    width: 26px;
+    height: 26px;
+    margin-left: 15px;
+}
+
+.sidebar-item span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4f4f4f;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+.sidebar-item:hover span {
+    color: #ffffff;
+}
+
+.sidebar-item.logo {
+    width: 100%;
+    height: 46px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: default;
+}
+
+.sidebar-item.logo:hover {
+    box-shadow: none;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    margin-left: 15px;
+}
+
+.logo-text {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    color: #ffffff;
+    opacity: 1;
+    margin-left: 10px;
+}
+
+.arrow-img {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    transform: 0;
+    margin-left: auto;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.sidebar-section {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-section span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #828282;
+    margin-left: 15px;
+}
+
+.sidebar-divider {
+    width: 86px;
+    height: 25px;
+    padding: 0px 15px 5px 15px;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-divider hr {
+    width: 40px;
+    border: 4px solid #9e8cfc;
+    margin: 0;
+}
+
+.badge {
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    width: 23px;
+    height: 23px;
+    border-radius: 15px;
+    background-color: #ff5c5c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 1;
+}
+
+
+.badge.green {
+    background-color: #6fcf97;
+}
+
+.badge.red {
+    background-color: #ea5455;
+}
+
+.badge.yellow {
+    background-color: #f2c94c;
+}
+
+.arrow-container {
+    cursor: pointer;
+}
+
+#toggle-sidebar:checked ~ .sidebar {
+    width: 85px;
+    margin-right: 10px;
+}
+
+.divider-img {
+    width: 40px;
+    height: auto;
+    margin-left: -20px;
+    margin-top: 40px;
+}
+
+#toggle-sidebar:checked ~ .sidebar .sidebar-divider {
+    display: flex; /* Показываем только в упрощенном режиме */
+}
+
+#toggle-sidebar:checked ~ .sidebar .sidebar-item span,
+#toggle-sidebar:checked ~ .sidebar .sidebar-section span,
+#toggle-sidebar:checked ~ .sidebar .logo-text {
+    display: none;
+}
+
+#toggle-sidebar:checked ~ .sidebar .sidebar-item,
+#toggle-sidebar:checked ~ .sidebar .sidebar-item.logo {
+    justify-content: center;
+}
+
+#toggle-sidebar:checked ~ .sidebar .logo-img {
+    margin-left: 15px; /* Убираем отступы для логотипа */
+}
+
+#toggle-sidebar:checked ~ .sidebar .arrow-container {
+    position: absolute;
+    top: 5px;
+    right: -22px;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggle-sidebar:checked ~ .sidebar .arrow-img {
+    transform: rotate(180deg);
+}
+
+.toggle-sidebar-checkbox {
+    display: none;
 }
