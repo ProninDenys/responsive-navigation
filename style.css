@@ -227,21 +227,21 @@ body {
 
 .badge {
     position: absolute;
-    top: 3px;
-    left: 20px;
+    top: 0px;
+    left: 30px;
     width: 23px;
     height: 23px;
     border-radius: 15px;
     background-color: #ff5c5c;
-    color: #ffffff;
+    color: #2f2d2d;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 800;
     opacity: 1;
+    
 }
-
 
 .badge.green {
     background-color: #6fcf97;
@@ -260,7 +260,7 @@ body {
 }
 
 #toggle-sidebar:checked ~ .sidebar {
-    width: 85px;
+    width: 100px;
     margin-right: 10px;
 }
 
@@ -272,22 +272,25 @@ body {
 }
 
 #toggle-sidebar:checked ~ .sidebar .sidebar-divider {
-    display: flex; /* Показываем только в упрощенном режиме */
+    display: flex; 
+    justify-content: center;
+    width: 100%;
 }
 
-#toggle-sidebar:checked ~ .sidebar .sidebar-item span,
+#toggle-sidebar:checked ~ .sidebar .sidebar-item span:not(.badge),
 #toggle-sidebar:checked ~ .sidebar .sidebar-section span,
 #toggle-sidebar:checked ~ .sidebar .logo-text {
-    display: none;
+    display: none;  
 }
 
 #toggle-sidebar:checked ~ .sidebar .sidebar-item,
 #toggle-sidebar:checked ~ .sidebar .sidebar-item.logo {
     justify-content: center;
+    
 }
 
 #toggle-sidebar:checked ~ .sidebar .logo-img {
-    margin-left: 15px; /* Убираем отступы для логотипа */
+    margin-left: 15px; 
 }
 
 #toggle-sidebar:checked ~ .sidebar .arrow-container {
@@ -309,4 +312,13 @@ body {
 
 .toggle-sidebar-checkbox {
     display: none;
+}
+
+#toggle-sidebar:checked ~ .sidebar .badge {
+    display: flex; 
+    position: absolute;
+    top: 0%; 
+    left: 60px; 
+    z-index: 10;
+   
 }
