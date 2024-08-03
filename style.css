@@ -1,18 +1,20 @@
+/* Основные стили */
 .header {
-    width: 1170px;
+    width: 100%;
+    max-width: 860px; /* или другое значение, которое вам нужно */
     height: 80px;
     position: relative;
     top: 30px;
-    left: 160px;
+    left: 60%;
+    transform: translateX(-50%);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
     box-shadow: 0px 0px 20px 0px #00000026;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
-    margin-left: 80px;
     gap: 0px;
     opacity: 1;
 }
@@ -35,13 +37,13 @@
 }
 
 .right-icons {
-    gap: 50px;
+    gap: 20px; /* Уменьшено для лучшей адаптивности */
 }
 
 .right-icons .flag {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px; /* Уменьшено для лучшей адаптивности */
 }
 
 .right-icons .flag a {
@@ -56,9 +58,7 @@
     height: 26px;
 }
 
-.right-icons .flag a span {
-    width: 68px;
-    height: 22px;
+.right-icons .language-text {
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
@@ -74,8 +74,7 @@
 
 .right-icons a:hover:not(.flag):not(.avatar) img,
 .left-icons a:hover img {
-    filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(744%)
-    hue-rotate(202deg) brightness(94%) contrast(98%);
+    filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(744%) hue-rotate(202deg) brightness(94%) contrast(98%);
 }
 
 .avatar {
@@ -89,7 +88,7 @@
     filter: none;
 }
 
-a:hover span {
+.language-text:hover {
     color: #9e8cfc;
 }
 
@@ -100,7 +99,8 @@ body {
 }
 
 .sidebar {
-    height: 1150px;
+    height: auto;
+    min-height: 100vh; 
     padding: 30px 0;
     background: #ffffff;
     box-shadow: 0px 0px 20px 0px #00000026;
@@ -137,6 +137,18 @@ body {
     width: 26px;
     height: 26px;
     margin-left: 15px;
+}
+
+.sidebar-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4f4f4f;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+.sidebar-item:hover .sidebar-text {
+    color: #ffffff;
 }
 
 .sidebar-item span {
@@ -240,7 +252,6 @@ body {
     font-size: 12px;
     font-weight: 800;
     opacity: 1;
-    
 }
 
 .badge.green {
@@ -286,7 +297,6 @@ body {
 #toggle-sidebar:checked ~ .sidebar .sidebar-item,
 #toggle-sidebar:checked ~ .sidebar .sidebar-item.logo {
     justify-content: center;
-    
 }
 
 #toggle-sidebar:checked ~ .sidebar .logo-img {
@@ -320,5 +330,54 @@ body {
     top: 0%; 
     left: 60px; 
     z-index: 10;
-   
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 1200px) {
+    .header {
+        padding: 10px;
+    }
+
+    .right-icons {
+        gap: 10px;
+    }
+
+    .right-icons .flag {
+        gap: 5px;
+    }
+
+    .right-icons .language-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        top: 10px;
+    }
+
+    .left-icons,
+    .right-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px; /* Уменьшаем ширину сайдбара */
+    }
+    .sidebar-text {
+        display: none; /* Скрываем текст */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 50px;
+    }
+    .sidebar-text {
+        display: none;
+    }
 }
