@@ -1,11 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Header and Sidebar Navigation</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-icons">
+        <a href="#link1"><img src="img 2/Vector.svg" alt="Icon 1" /></a>
+        <a href="#link2"><img src="img 2/Vector — 111.svg" alt="Icon 2" /></a>
+        <a href="#link3"><img src="img 2/Vector (2).svg" alt="Icon 3" /></a>
+        <a href="#link4"><img src="img 2/Vector (3).svg" alt="Icon 4" /></a>
+      </div>
+      <div class="right-icons">
+        <div class="flag">
+          <a href="#link5"><img src="img 2/lang-icon.svg" alt="Flag USA" /></a>
+          <a href="#link6" class="language-text"><span>English</span></a>
+        </div>
+        <a href="#link7"><img src="img 2/Vector (4).svg" alt="Icon 5" /></a>
+        <a href="#link8"><img src="img 2/Vector (5).svg" alt="Icon 6" /></a>
+        <a href="#link9"><img src="img 2/Vector (6).svg" alt="Icon 7" /></a>
+        <a href="#link10" class="avatar"><img src="img 2/Avatar.svg" alt="Avatar" /></a>
+      </div>
+    </header>
+
+    <input
+      type="checkbox"
+      id="toggle-sidebar"
+      class="toggle-sidebar-checkbox"
+    />
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-item logo">
+        <img src="img/icon.svg" alt="Logo" class="logo-img" />
+        <span class="logo-text">LightBoard</span>
+        <label for="toggle-sidebar" class="arrow-container">
+          <img src="img/arrow.svg" alt="Arrow" class="arrow-img" />
+        </label>
+      </div>
+      <div class="sidebar-item">
+        <img src="img/dashboard.svg" alt="Dashboard Icon" />
+        <span class="sidebar-text">Dashboard</span>
+    </div>
+      <div class="sidebar-divider">
+        <img src="divider/line.svg" alt="Divider" class="divider-img" />
+      </div>
+      <div class="sidebar-section">
+        <span>APPS</span>
+        <div class="sidebar-item">
+          <img src="img/Vector.svg" alt="Email Icon" />
+          <span>Email</span>
+          <div class="badge green">10</div>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (1).svg" alt="Chats Icon" />
+          <span>Chats</span>
+          <div class="badge red">10</div>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/calendar (2).svg" alt="Calendar Icon" />
+          <span>Calendar</span>
+          <div class="badge yellow">5</div>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (3).svg" alt="News Icon" />
+          <span>News</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (4).svg" alt="Knowledge Icon" />
+          <span>Knowledge</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (5).svg" alt="File Manager Icon" />
+          <span>File Manager</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (6).svg" alt="Leaflet Maps Icon" />
+          <span>Leaflet Maps</span>
+        </div>
+        <div class="sidebar-divider">
+          <img src="divider/line.svg" alt="Divider" class="divider-img" />
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <span>AUTH PAGES</span>
+        <div class="sidebar-item">
+          <img src="img/Vector (7).svg" alt="Profile Icon" />
+          <span>Profile</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (8).svg" alt="Permissions Icon" />
+          <span>Permissions</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (9).svg" alt="Logout Icon" />
+          <span>Log Out</span>
+        </div>
+        <div class="sidebar-divider">
+          <img src="divider/line.svg" alt="Divider" class="divider-img" />
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <span>USER INTERFACE</span>
+        <div class="sidebar-item">
+          <img src="img/Vector (10).svg" alt="Feather Icon" />
+          <span>Feather</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (11).svg" alt="Ecommerce Icon" />
+          <span>Ecommerce</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (12).svg" alt="Components Icon" />
+          <span>Components</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (13).svg" alt="Pages Icon" />
+          <span>Pages</span>
+        </div>
+        <div class="sidebar-item">
+          <img src="img/Vector (14).svg" alt="Editor Icon" />
+          <span>Editor</span>
+        </div>
+      </div>
+    </aside>
+  </body>
 </html>
